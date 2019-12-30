@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .row {
+            background-color: darkgray;
+        }
+
+        .wrap-title {
+            text-align: center;
+        }
+
+        .wrap {
+            margin: 20px 0;
+        }
+
+        .con {
+            display: flex;
+        }
+
+        .left {
+            flex: 1
+        }
+
+        .right {
+            flex: 1
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row wrap-header">
+            <div class="col-xs-12 col-sm-12 col-md-12 wrap-title">
+                <h1>李 宁 – Web前端工程师</h1>
+            </div>
+        </div>
+        <div class="row wrap-contain">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div>个人资料</div>
+                <hr>
+                <div class="wrap">
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">姓名:</label>
+                            <span>李宁</span>
+                        </div>
+                        <div class="right">
+                            <label for="sex">性别:</label>
+                            <span>男</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">学历:</label>
+                            <span>本科</span>
+                        </div>
+                        <div class="right">
+                            <label for="sex">年龄:</label>
+                            <span>28</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">工作经验:</label>
+                            <span>4年</span>
+                        </div>
+                        <div class="right">
+                            <label for="sex">地址:</label>
+                            <span>南京</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">移动电话:</label>
+                            <span>15110808095</span>
+                        </div>
+                        <div class="right">
+                            <label for="sex">电子邮件:</label>
+                            <span>lining0214gcy@sina.com</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div>求职意向</div>
+                <hr>
+                <div class="wrap">
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">期望职位:</label>
+                            <span>Wep前端开发</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">工作性质:</label>
+                            <span>全职</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">工作状态:</label>
+                            <span>在职</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">期望薪资:</label>
+                            <span>面议</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div>专业技能</div>
+                <hr>
+                <div class="wrap">
+                    <div class="con">
+                        <div class="left">
+                            <span>1、掌握HTML（HTML5）,CSS(CSS3)、JavaScript(ES6)</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>2、Vue，Vue-router，Vuex,element-ui，vue-cli2/3</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>3、Echarts数据可视化图表</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>4、熟悉React，React-Router ，Antd,dva, Webpack Angular1</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>5、熟悉后端Nodejs,express,mysql，nginx,pm2，linux等后端相关接口部署</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div>个人学习(方式/方法)</div>
+                <hr>
+                <div class="wrap">
+                    <div class="con">
+                        <div class="left">
+                            <span>1、个人开源练习项目 https://gitee.com/ln471399281/vue-demo.git</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>2、Javascript MDN/stackOverflow/segmentfault/知乎/掘金/慕课网视频教程</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>3、《软技能-代码之外生存指南》</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>4、采用有道云笔记/记录知识点，生活思考/回顾，分享</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div>自我评价</div>
+                <hr>
+                <div class="wrap">
+                    <div class="con">
+                        <div class="left">
+                            <span>1、工作态度认真，在工作中善于反思问题，总结问题</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>2、善于与各负责人进行积极有效的沟通，快速定位解决问题</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>3、快速领悟需求，拆分需求，制定开发方案</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <span>4、独立负责前端工程搭建，独立完成功能模块，构建部署</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div>工作经历</div>
+                <hr>
+                <div class="wrap">
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">2019.8-至今</label>
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            <span>新智道枢(上海)科技有限公司</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">2018.1-2019.8</label>
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            <span>南京中高知识产权股份有限公司</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">2015.7-2017.12</label>
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            <span>北京软通动力信息集团有限公司</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div>项目经验</div>
+                <hr>
+                <div class="wrap">
+                    <p>项目一:带领团队，按时交付数据集成项目模块（兼组长角色）</p>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目名称:</label>
+                            <span>松江公安智慧指挥一体化-后台管理系统</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目描述:</label>
+                            <span>为松江智慧指挥数据大屏提供数据处理管理，分为：用户管理/勤务管理/大屏配置/视频方案/计划预案/资产管理/运营维护/登陆注册等模块</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">应用技术:</label>
+                            <span>vue vue-router vuex element-ui vue-cli3 webpack axios</span>
+                        </div>
+                    </div>
+                    <p>项目二:带领协调小组，按时完成智慧合成指挥等安保演示项目（兼项目经理角色）</p>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目名称:</label>
+                            <span>上海黄埔公安智慧指挥系统</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目描述:</label>
+                            <span>用于公安智能智慧数据大屏，实时监控处理突发等应急响应系统</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">应用技术:</label>
+                            <span>vue vue-router vux GIS（openlayer） echarts 视频 socket.js</span>
+                        </div>
+                    </div>
+                    <p>项目三:配合团队，快速开发中台管理系统</p>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目名称:</label>
+                            <span>中高专利宝系统/经纪人管理系统
+                                https://store.cnuip.com/user/login
+                            </span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目描述:</label>
+                            <span>专利宝系统实现了专利管理，专利检索，专利交易，专利年费预警等业务需求，供高校及其高校科研成果人员操作，对接中高交易平台，由我司业务人员操作上架，供企业选择交易。经纪管理系统，实现了第三方店铺专利机构的拍卖，委托
+                                开店等第三方平台。</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">应用技术:</label>
+                            <span>React,React-Router,Dva, Antd-Pro，nodejs，express</span>
+                        </div>
+                    </div>
+                    <p>项目四:配合团队，快速响应营销推广活动H5统计报告开发</p>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目名称:</label>
+                            <span>专利宝App（H5）https://github.com/langnan/store2-h5-node.js.git</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目描述:</label>
+                            <span>基于原声版app，活动统计营销定制H5报告</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">应用技术:</label>
+                            <span>ReactNative，H5，node，express pug，pm2部署</span>
+                        </div>
+                    </div>
+                    <p>项目五:配合团队，启动中高官网交易平台的研发</p>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目名称:</label>
+                            <span>CNUIP2.0 中高知识产权交易总平台(https://www.cnuip.com)</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目描述:</label>
+                            <span>本项目为校企产学研合作全链路条解决方案提供商，为专利交易平台，并且提供专利申请，商标注册，专利代理机构入驻等服务。</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">应用技术:</label>
+                            <span>nodejs+express+ejs angularjs（会员中心）</span>
+                        </div>
+                    </div>
+                    <p>项目六:长期北京-南京出差驻场江苏税务</p>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目名称:</label>
+                            <span>江苏税务局数据可视化定制开发</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">项目描述:</label>
+                            <span>为江苏税务局定制开发H3C的运维可视化图表，数据可视化大屏</span>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">应用技术:</label>
+                            <span>echarts，jquery ，angularjs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div>教育背景</div>
+                <hr>
+                <div class="wrap">
+                    <div class="con">
+                        <div class="left">
+                            <label for="name">2012.9-2016.6</label>
+                        </div>
+                        <div class="left">
+                            <span>山西农业大学信息学院</span>
+                        </div>
+                        <div class="left">
+                            <span>机电信息一体化</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
