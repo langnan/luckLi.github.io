@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -18,13 +19,398 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
     <style>
+        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+        /* Document
+   ========================================================================== */
+
+        /**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+        html {
+            line-height: 1.15;
+            /* 1 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+        }
+
+        /* Sections
+   ========================================================================== */
+
+        /**
+ * Remove the margin in all browsers.
+ */
+
+        body {
+            margin: 0;
+        }
+
+        /**
+ * Render the `main` element consistently in IE.
+ */
+
+        main {
+            display: block;
+        }
+
+        /**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+
+        /* Grouping content
+   ========================================================================== */
+
+        /**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
         hr {
-            background-color: red;
+            box-sizing: content-box;
+            /* 1 */
+            height: 0;
+            /* 1 */
+            overflow: visible;
+            /* 2 */
+        }
+
+        /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+        pre {
+            font-family: monospace, monospace;
+            /* 1 */
+            font-size: 1em;
+            /* 2 */
+        }
+
+        /* Text-level semantics
+   ========================================================================== */
+
+        /**
+ * Remove the gray background on active links in IE 10.
+ */
+
+        a {
+            background-color: transparent;
+        }
+
+        /**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+        abbr[title] {
+            border-bottom: none;
+            /* 1 */
+            text-decoration: underline;
+            /* 2 */
+            text-decoration: underline dotted;
+            /* 2 */
+        }
+
+        /**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+        code,
+        kbd,
+        samp {
+            font-family: monospace, monospace;
+            /* 1 */
+            font-size: 1em;
+            /* 2 */
+        }
+
+        /**
+ * Add the correct font size in all browsers.
+ */
+
+        small {
+            font-size: 80%;
+        }
+
+        /**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        /* Embedded content
+   ========================================================================== */
+
+        /**
+ * Remove the border on images inside links in IE 10.
+ */
+
+        img {
+            border-style: none;
+        }
+
+        /* Forms
+   ========================================================================== */
+
+        /**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            /* 1 */
+            font-size: 100%;
+            /* 1 */
+            line-height: 1.15;
+            /* 1 */
+            margin: 0;
+            /* 2 */
+        }
+
+        /**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+        button,
+        input {
+            /* 1 */
+            overflow: visible;
+        }
+
+        /**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+        button,
+        select {
+            /* 1 */
+            text-transform: none;
+        }
+
+        /**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+        }
+
+        /**
+ * Remove the inner border and padding in Firefox.
+ */
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        /**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        /**
+ * Correct the padding in Firefox.
+ */
+
+        fieldset {
+            padding: 0.35em 0.75em 0.625em;
+        }
+
+        /**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+        legend {
+            box-sizing: border-box;
+            /* 1 */
+            color: inherit;
+            /* 2 */
+            display: table;
+            /* 1 */
+            max-width: 100%;
+            /* 1 */
+            padding: 0;
+            /* 3 */
+            white-space: normal;
+            /* 1 */
+        }
+
+        /**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        /**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+        textarea {
+            overflow: auto;
+        }
+
+        /**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+        [type="checkbox"],
+        [type="radio"] {
+            box-sizing: border-box;
+            /* 1 */
+            padding: 0;
+            /* 2 */
+        }
+
+        /**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+        [type="search"] {
+            -webkit-appearance: textfield;
+            /* 1 */
+            outline-offset: -2px;
+            /* 2 */
+        }
+
+        /**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+        [type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
+
+        /* Interactive
+   ========================================================================== */
+
+        /*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+        details {
+            display: block;
+        }
+
+        /*
+ * Add the correct display in all browsers.
+ */
+
+        summary {
+            display: list-item;
+        }
+
+        /* Misc
+   ========================================================================== */
+
+        /**
+ * Add the correct display in IE 10+.
+ */
+
+        template {
+            display: none;
+        }
+
+        /**
+ * Add the correct display in IE 10.
+ */
+
+        [hidden] {
+            display: none;
+        }
+
+        hr {
+            background-color: #cccccc;
             height: 1px;
         }
 
         .row {
-            background-color: blanchedalmond;
+            background-color: rgba(red, green, blue, alpha);
+        }
+
+        .container {
+            background-color: #f5f5d5;
+            animation-duration: 5s;
         }
 
         .wrap-title {
@@ -33,6 +419,7 @@
 
         .wrap {
             margin: 20px 0;
+            background-color: #f5f5d5;
         }
 
         .con {
@@ -72,11 +459,32 @@
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
             background-color: rgba(7, 170, 247, 1);
         }
+
+        .module_title {
+            font-size: 20px;
+            font-weight: 700;
+            color: rgba(30, 144, 255, 1)
+        }
+
+        span {
+            font-size: 18px;
+            color: #000;
+            /* font-weight: 600; */
+            margin: 5px 0;
+            display: inline-block;
+        }
+
+        .pro-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(30, 144, 255, 1);
+            margin: 10px 0;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container animated fadeInRight">
         <div class="row wrap-header">
             <div class="col-xs-12 col-sm-12 col-md-12 wrap-title">
                 <h1>李 宁 – Web前端工程师</h1>
@@ -84,46 +492,46 @@
         </div>
         <div class="row wrap-contain">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div>个人资料</div>
+                <div class="module_title">基本信息</div>
                 <hr>
                 <div class="wrap">
                     <div class="con">
                         <div class="left">
-                            <label for="name">姓名:</label>
+                            <span>姓名:</span>
                             <span>李宁</span>
                         </div>
                         <div class="right">
-                            <label for="sex">性别:</label>
+                            <span for="sex">性别:</span>
                             <span>男</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">学历:</label>
+                            <span for="name">学历:</span>
                             <span>本科</span>
                         </div>
                         <div class="right">
-                            <label for="sex">年龄:</label>
+                            <span for="sex">年龄:</span>
                             <span>28</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">工作经验:</label>
+                            <span for="name">工作经验:</span>
                             <span>4年</span>
                         </div>
                         <div class="right">
-                            <label for="sex">地址:</label>
+                            <span for="sex">地址:</span>
                             <span>南京</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">移动电话:</label>
+                            <span for="name">移动电话:</span>
                             <span>15110808095</span>
                         </div>
                         <div class="right">
-                            <label for="sex">电子邮件:</label>
+                            <span for="sex">电子邮件:</span>
                             <span>lining0214gcy@sina.com</span>
                         </div>
                     </div>
@@ -131,37 +539,37 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div>求职意向</div>
+                <div class="module_title">求职意向</div>
                 <hr>
                 <div class="wrap">
                     <div class="con">
                         <div class="left">
-                            <label for="name">期望职位:</label>
+                            <span for="name">期望职位:</span>
                             <span>Wep前端开发</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">工作性质:</label>
+                            <span for="name">工作性质:</span>
                             <span>全职</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">工作状态:</label>
+                            <span for="name">工作状态:</span>
                             <span>在职</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">期望薪资:</label>
+                            <span for="name">期望薪资:</span>
                             <span>面议</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div>专业技能</div>
+                <div class="module_title">专业技能</div>
                 <hr>
                 <div class="wrap">
                     <div class="con">
@@ -192,7 +600,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div>个人学习(方式/方法)</div>
+                <div class="module_title">个人学习(方式/方法)</div>
                 <hr>
                 <div class="wrap">
                     <div class="con">
@@ -218,7 +626,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div>自我评价</div>
+                <div class="module_title">自我评价</div>
                 <hr>
                 <div class="wrap">
                     <div class="con">
@@ -244,12 +652,12 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div>工作经历</div>
+                <div class="module_title">工作经历</div>
                 <hr>
                 <div class="wrap">
                     <div class="con">
                         <div class="left">
-                            <label for="name">2019.8-至今</label>
+                            <span for="name">2019.8-至今</span>
                             &nbsp;
                             &nbsp;
                             &nbsp;
@@ -258,7 +666,7 @@
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">2018.1-2019.8</label>
+                            <span for="name">2018.1-2019.8</span>
                             &nbsp;
                             &nbsp;
                             &nbsp;
@@ -267,7 +675,7 @@
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">2015.7-2017.12</label>
+                            <span for="name">2015.7-2017.12</span>
                             &nbsp;
                             &nbsp;
                             &nbsp;
@@ -277,51 +685,51 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div>项目经验</div>
+                <div class="module_title">项目经验</div>
                 <hr>
                 <div class="wrap">
-                    <p>项目一:带领团队，按时交付数据集成项目模块（兼组长角色）</p>
+                    <p class="pro-title">项目一:带领团队，按时交付数据集成项目模块（兼组长角色）</p>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目名称:</label>
+                            <span for="name">项目名称:</span>
                             <span>松江公安智慧指挥一体化-后台管理系统</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目描述:</label>
+                            <span for="name">项目描述:</span>
                             <span>为松江智慧指挥数据大屏提供数据处理管理，分为：用户管理/勤务管理/大屏配置/视频方案/计划预案/资产管理/运营维护/登陆注册等模块</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">应用技术:</label>
+                            <span for="name">应用技术:</span>
                             <span>vue vue-router vuex element-ui vue-cli3 webpack axios</span>
                         </div>
                     </div>
-                    <p>项目二:带领协调小组，按时完成智慧合成指挥等安保演示项目（兼项目经理角色）</p>
+                    <p class="pro-title">项目二:带领协调小组，按时完成智慧合成指挥等安保演示项目（兼项目经理角色）</p>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目名称:</label>
+                            <span for="name">项目名称:</span>
                             <span>上海黄埔公安智慧指挥系统</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目描述:</label>
+                            <span for="name">项目描述:</span>
                             <span>用于公安智能智慧数据大屏，实时监控处理突发等应急响应系统</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">应用技术:</label>
+                            <span for="name">应用技术:</span>
                             <span>vue vue-router vux GIS（openlayer） echarts 视频 socket.js</span>
                         </div>
                     </div>
-                    <p>项目三:配合团队，快速开发中台管理系统</p>
+                    <p class="pro-title">项目三:配合团队，快速开发中台管理系统</p>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目名称:</label>
+                            <span for="name">项目名称:</span>
                             <span>中高专利宝系统/经纪人管理系统
                                 https://store.cnuip.com/user/login
                             </span>
@@ -329,83 +737,83 @@
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目描述:</label>
+                            <span for="name">项目描述:</span>
                             <span>专利宝系统实现了专利管理，专利检索，专利交易，专利年费预警等业务需求，供高校及其高校科研成果人员操作，对接中高交易平台，由我司业务人员操作上架，供企业选择交易。经纪管理系统，实现了第三方店铺专利机构的拍卖，委托
                                 开店等第三方平台。</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">应用技术:</label>
+                            <span for="name">应用技术:</span>
                             <span>React,React-Router,Dva, Antd-Pro，nodejs，express</span>
                         </div>
                     </div>
-                    <p>项目四:配合团队，快速响应营销推广活动H5统计报告开发</p>
+                    <p class="pro-title">项目四:配合团队，快速响应营销推广活动H5统计报告开发</p>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目名称:</label>
+                            <span for="name">项目名称:</span>
                             <span>专利宝App（H5）https://github.com/langnan/store2-h5-node.js.git</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目描述:</label>
+                            <span for="name">项目描述:</span>
                             <span>基于原声版app，活动统计营销定制H5报告</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">应用技术:</label>
+                            <span for="name">应用技术:</span>
                             <span>ReactNative，H5，node，express pug，pm2部署</span>
                         </div>
                     </div>
-                    <p>项目五:配合团队，启动中高官网交易平台的研发</p>
+                    <p class="pro-title">项目五:配合团队，启动中高官网交易平台的研发</p>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目名称:</label>
+                            <span for="name">项目名称:</span>
                             <span>CNUIP2.0 中高知识产权交易总平台(https://www.cnuip.com)</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目描述:</label>
+                            <span for="name">项目描述:</span>
                             <span>本项目为校企产学研合作全链路条解决方案提供商，为专利交易平台，并且提供专利申请，商标注册，专利代理机构入驻等服务。</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">应用技术:</label>
+                            <span for="name">应用技术:</span>
                             <span>nodejs+express+ejs angularjs（会员中心）</span>
                         </div>
                     </div>
-                    <p>项目六:长期北京-南京出差驻场江苏税务</p>
+                    <p class="pro-title">项目六:长期北京-南京出差驻场江苏税务</p>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目名称:</label>
+                            <span for="name">项目名称:</span>
                             <span>江苏税务局数据可视化定制开发</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">项目描述:</label>
+                            <span for="name">项目描述:</span>
                             <span>为江苏税务局定制开发H3C的运维可视化图表，数据可视化大屏</span>
                         </div>
                     </div>
                     <div class="con">
                         <div class="left">
-                            <label for="name">应用技术:</label>
+                            <span for="name">应用技术:</span>
                             <span>echarts，jquery ，angularjs</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div>教育背景</div>
+                <div class="module_title">教育背景</div>
                 <hr>
                 <div class="wrap">
                     <div class="con">
                         <div class="left">
-                            <label for="name">2012.9-2016.6</label>
+                            <span for="name">2012.9-2016.6</span>
                         </div>
                         <div class="left">
                             <span>山西农业大学信息学院</span>
